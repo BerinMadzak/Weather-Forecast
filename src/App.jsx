@@ -6,7 +6,7 @@ import WeatherData from './components/WeatherData';
 
 function App() {
   const [data, setData] = useState('');
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState('wait');
 
   async function loadData(event) {
     event.preventDefault();
@@ -14,7 +14,6 @@ function App() {
     
     const weatherData = await getWeatherData(location, setLoading);
     setData(weatherData);
-    console.log(weatherData);
   }
 
   return (

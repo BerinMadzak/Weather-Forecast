@@ -1,9 +1,10 @@
 import SevenDayForecast from "./SevenDayForecast";
 
 export default function WeatherData({data, loading}) {
-    if(loading) return <div className="loader"></div>;
+    if(loading === 'loading') return <div className="loader"></div>;
+    if(loading === 'error') return <p className="info">Failed to find location - Please try again!</p>
 
-    if(!data) return <p>Enter a location to display weather data!</p>;
+    if(!data) return <p className="info">Enter a location to display weather data!</p>;
 
     let date = new Date(data.date);
     return (

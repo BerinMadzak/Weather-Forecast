@@ -1,14 +1,14 @@
 export async function getWeatherData(location, setLoading) {
     if(location === '') return;
     try {
-        setLoading(true);
+        setLoading('loading');
         let response = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${location}/next6days?unitGroup=metric&key=${import.meta.env.VITE_WEATHER_KEY}&contentType=json`);
         let data = await response.json();
-        console.log(data);
-        setLoading(false);
+        setLoading('wait');
         return processData(data);
     }
     catch(e) {
+        setLoading('error');
         console.log(e);
     }
 }
