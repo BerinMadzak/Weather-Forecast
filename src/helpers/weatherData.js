@@ -12,6 +12,7 @@ export async function getWeatherData(location) {
 }
 
 function processData(data) {
+    let sevenDayData = processSevenDayData(data.days);
     return {
         address: data.resolvedAddress,
         description: data.description,
@@ -23,5 +24,23 @@ function processData(data) {
         windSpeed: data.currentConditions.windspeed,
         precipProb: data.currentConditions.precipprob,
         icon: data.currentConditions.icon,
+        sevenDayForecast: sevenDayData
+    };
+}
+
+function processSevenDayData(dayArray) {
+    let arr = [];
+    for(let i = 0; i < dayArray.length; i++) {
+        arr.push(processDayData(dayArray[i]));
+    }
+    return arr;
+}
+
+function processDayData(data) {
+    return {
+        date: data.datetime,
+        tempMin: data.tempmin,
+        tempMax: data.tempmax,
+        icon: data.icon
     };
 }

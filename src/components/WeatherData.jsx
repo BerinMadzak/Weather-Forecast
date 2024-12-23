@@ -1,3 +1,5 @@
+import SevenDayForecast from "./SevenDayForecast";
+
 export default function WeatherData({data}) {
     if(!data) return <p>Enter a location to display weather data!</p>;
 
@@ -25,6 +27,8 @@ export default function WeatherData({data}) {
                 </div>
             </div>
             <p>{data.description}</p>
+            <h2>7-Day Forecast</h2>
+            <SevenDayForecast data={data.sevenDayForecast}/>
         </div>
     );
 }
