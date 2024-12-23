@@ -15,8 +15,12 @@ form button {
 
 form input {
   height: 35px;
-  width: 400px;
+  width: 1200px;
   text-align: center;
+  font-size: 1.2rem;
+}
+
+form label {
   font-size: 1.2rem;
 }
 

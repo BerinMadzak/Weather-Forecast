@@ -7,7 +7,6 @@ export default function WeatherData({data, loading}) {
     if(!data) return <p>Enter a location to display weather data!</p>;
 
     let date = new Date(data.date);
-    console.log(date);
     return (
         <div>
             <h1 className="location">{data.address}</h1>
