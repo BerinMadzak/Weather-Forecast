@@ -1,21 +1,33 @@
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
 }
 
 body {
   align-items: flex-start;
-  background-color: rgb(56, 86, 141);
+  background-color: #466CB2;
 }
 
 form button {
   margin: 0 20px;
+  width: 200px;
+}
+
+form input {
+  height: 35px;
+  width: 400px;
+  text-align: center;
+  font-size: 1.2rem;
 }
 
 form {
   min-height: 100px;
+  width: 100vw;
+  background-color: #38568d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
 }
 
 .weather-data {
@@ -82,6 +94,7 @@ form {
 
 .seven-day {
   display: flex;
+  justify-content: center;
   gap: 80px;
 }
 
