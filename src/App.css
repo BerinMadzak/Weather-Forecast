@@ -9,6 +9,8 @@
 #root {
   margin: 0 auto;
   text-align: center;
+  overflow: auto;
+  width: 100%;
 }
 
 body {
@@ -39,6 +41,7 @@ form {
   justify-content: center;
   align-items: center;
   gap: 10px;
+  padding: 10px;
 }
 
 .container {
@@ -108,6 +111,7 @@ form {
 
 .simple-flex {
   display: flex;
+  justify-content: center;
   gap: 10px;
 }
 
@@ -132,6 +136,53 @@ h2 {
 img {
   width: 100px;
   height: 100px;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+  .seven-day {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .day-forecast {
+    width: 100%;
+    border-bottom: 1px solid black;
+  }
+
+  .weather-main {
+    flex-direction: column;
+    gap: 0px;
+  }
+
+  .temp {
+    font-size: 2rem;
+  }
+
+  .other-display {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    padding: 0px 20px;
+    padding-top: 50px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  form input {
+    width: 350px;
+  }
+}
+
+@media (max-height: 1400px) {
+  .weather-main {
+    min-height: 60vh;
+  }
 }
 
 /* Loader */
