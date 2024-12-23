@@ -1,4 +1,3 @@
-import { useState } from "react";
 import SevenDayForecast from "./SevenDayForecast";
 
 export default function WeatherData({data, loading}) {
