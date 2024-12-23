@@ -5,34 +5,6 @@
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
 .card {
   padding: 2em;
 }
@@ -40,3 +12,55 @@
 .read-the-docs {
   color: #888;
 }
+
+.weather-data {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+
+.weather-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  padding-right: 30px;
+  border-right: 3px solid white;
+}
+
+.temp-display {
+  display: flex;
+  flex-direction: column;
+}
+
+.other-display {
+  padding-left: 30px;
+}
+
+.general-display {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  font-size: 1.5rem;
+  border-bottom: 5px solid white;
+}
+
+.temp {
+  font-size: 4rem;
+  margin: 0;
+}
+
+.feels-like {
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.weather-main img {
+  width: 100px;
+  height: 100px;
+}
+
+.location {
+  font-size: 2rem;
+}
+
