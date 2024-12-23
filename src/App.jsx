@@ -6,12 +6,13 @@ import WeatherData from './components/WeatherData';
 
 function App() {
   const [data, setData] = useState('');
+  const [loading, setLoading] = useState(false);
 
   async function loadData(event) {
     event.preventDefault();
     const location = event.target.elements[0].value;
     
-    const weatherData = await getWeatherData(location);
+    const weatherData = await getWeatherData(location, setLoading);
     setData(weatherData);
     console.log(weatherData);
   }
@@ -19,7 +20,7 @@ function App() {
   return (
     <>
       <Search loadData={loadData} />
-      <WeatherData data={data}></WeatherData>
+      <WeatherData data={data} loading={loading} />
     </>
   )
 }

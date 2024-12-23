@@ -1,6 +1,9 @@
+import { useState } from "react";
 import SevenDayForecast from "./SevenDayForecast";
 
-export default function WeatherData({data}) {
+export default function WeatherData({data, loading}) {
+    if(loading) return <div className="loader"></div>;
+
     if(!data) return <p>Enter a location to display weather data!</p>;
 
     let date = new Date(data.date);
