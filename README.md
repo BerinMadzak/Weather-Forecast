@@ -48,3 +48,4 @@ VITE_WEATHER_KEY=your_key
 ```bash
 npm run dev
 ```
+
