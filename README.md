@@ -1,7 +1,7 @@
 # Weather Forecast
 
 You can try the project here: 
-https://weather-forecast-579q90un1-berinmadzaks-projects.vercel.app/
+https://weather-forecast-rose-rho.vercel.app/
 
 A Weather Forecast application built with **Vite** and **React**. The app allows the user to insert a location and it displays current weather data and a 7-day weather forecast. The weather data is obtained using the **Visual Crossing Weather API**.
 
